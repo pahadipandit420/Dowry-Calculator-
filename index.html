@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dowry Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Popup for displaying the quote with caution sign -->
+  <div id="quotePopup" class="quote-popup">
+    <span class="caution-icon">⚠️</span>
+    <span id="quoteText"></span>
+  </div>
+
+  <div class="container">
+    <h1>Dowry Calculator</h1>
+    
+    <form id="dowryForm">
+      <label for="girlsEducation">Girl's Education:</label>
+      <select id="girlsEducation">
+        <option value="select">Select</option>
+        <option value="illiterate">Illiterate</option>
+        <option value="undergraduate">Undergraduate</option>
+        <option value="graduate">Graduate</option>
+        <option value="doctorate">Doctorate</option>
+      </select>
+
+      <label for="boysEducation">Boy's Education:</label>
+      <select id="boysEducation">
+        <option value="select">Select</option>
+        <option value="illiterate">Illiterate</option>
+        <option value="undergraduate">Undergraduate</option>
+        <option value="graduate">Graduate</option>
+        <option value="doctorate">Doctorate</option>
+      </select>
+
+      <label for="boysJobStatus">Boy's Job Status:</label>
+      <select id="boysJobStatus">
+        <option value="select">Select</option>
+        <option value="private">Private</option>
+        <option value="government">Government</option>
+        <option value="self-employed">Self-owned Business</option>
+      </select>
+
+      <label for="doesBoyOwnHouse">Does the boy own a house?</label>
+      <select id="doesBoyOwnHouse">
+        <option value="select">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="monthlyIncome">Monthly Income (in ₹):</label>
+      <input type="text" id="monthlyIncome" value="0">
+
+      <button type="button" id="calculateBtn">Calculate Dowry</button>
+    </form>
+
+    <div id="calculatingText" style="display: none;">Calculating...</div>
+    <div id="loadingBar" style="display: none; width: 0%; height: 5px; background-color: #ffcc00; margin-top: 10px;"></div>
+
+    <div id="result"></div> <!-- This will display the dowry amount -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
